@@ -13,6 +13,19 @@ export class Tool {
       return format(mem.rss)
   }
 
+  static sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+  
+  static getMemoryUsage() {
+      const mem = process.memoryUsage();
+      const format = (bytes) => {
+          return (bytes / 1024 / 1024).toFixed(2)
+      }
+
+      return format(mem.rss)
+  }
+
   static writeFile() {
       // const today = tool.Utils.dateNow('yyyyMMdd')
       // fs.appendFile(`monit_${today}.log`, info,(e)=>{
