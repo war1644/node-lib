@@ -123,7 +123,10 @@ export class TSLog {
     // getFunctionName
     // getFileName
     // getLineNumber
-    return stack[3].getFileName() + ':' + stack[3].getLineNumber()
+    const rootPath = process.cwd()
+    const curPath = stack[3].getFileName()
+    const arr = curPath.split(rootPath)
+    return '.'+arr[arr.length-1] + ':' + stack[3].getLineNumber()
   }
 
 
