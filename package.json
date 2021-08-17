@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "node基础库",
   "main": "src/index.js",
-  "author": "duanxuqiang@jwzg.com",
+  "author": "dxq1994@gmail.com",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "node ./src/app.js",
-    "dev": "nodemon ./src/app.js"
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
